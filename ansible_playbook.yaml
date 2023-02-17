@@ -1,7 +1,5 @@
 - hosts: all
-  gather_facts: no
- 
-  tasks:
+   tasks:
   - name: ansible copy file from remote to local.
     fetch:
      src: /var/lib/jenkins/workspace/ansible/index.html
