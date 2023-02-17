@@ -4,5 +4,5 @@
     - name: copying file with playbook
       become: true 
       copy:
-        src: /var/lib/jenkins/workspace/ansible/intex.html
+        src: /var/lib/jenkins/workspace/ansible/index.html
         dest: /var/www/html/
