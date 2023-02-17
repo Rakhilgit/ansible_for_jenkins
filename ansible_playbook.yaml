@@ -1,6 +1,8 @@
-- hosts: all
-   tasks:
-  - name: ansible copy file from remote to local.
-    fetch:
-     src: /var/lib/jenkins/workspace/ansible/index.html
-     dest: /var/www/html/
+- name: Ansible Copy Example Local to Remote
+  hosts: all
+  tasks:
+    - name: copying file with playbook
+      become: true 
+      copy:
+        src: /var/lib/jenkins/workspace/ansible/intex.html
+        dest: /var/www/html
