@@ -5,4 +5,4 @@
       become: true 
       copy:
         src: /var/lib/jenkins/workspace/ansible/intex.html
-        dest: /var/www/html
+        dest: /var/www/html/
