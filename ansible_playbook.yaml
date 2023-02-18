@@ -1,11 +1,8 @@
-- name: Ansible Copy Example Local to Remote
-  hosts: all
+- hosts: all
+  name: copy html file
+  become: true
   tasks:
-     - name: Install Apache
-       yum: name=httpd update_cache=yes state=latest
-      
-    - name: copying file with playbook
-      become: true 
+    - name: copy file
       copy:
         src: /var/lib/jenkins/workspace/ansible/index.html
-        dest: /var/www/html/
+        dest: /var/www/html/index.html
